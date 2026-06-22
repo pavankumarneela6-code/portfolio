@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pavan Kumar | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:'Poppins',sans-serif;
+    }
+
+    html{
+        scroll-behavior:smooth;
+    }
+
+    body{
+        background:#0a0a0a;
+        color:white;
+    }
+
+    body::-webkit-scrollbar{
+        width:8px;
+    }
+
+    body::-webkit-scrollbar-thumb{
+        background:#00e5ff;
+        border-radius:10px;
+    }
+
+    .navbar{
+        position:fixed;
+        width:100%;
+        top:0;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:20px 8%;
+        backdrop-filter:blur(15px);
+        background:rgba(255,255,255,0.05);
+        z-index:1000;
+    }
+
+    .logo{
+        font-size:28px;
+        font-weight:700;
+        color:#00e5ff;
+    }
+
+    .navbar ul{
+        display:flex;
+        list-style:none;
+        gap:30px;
+    }
+
+    .navbar a{
+        text-decoration:none;
+        color:white;
+        transition:.3s;
+    }
+
+    .navbar a:hover{
+        color:#00e5ff;
+    }
+
+    .hero{
+        min-height:100vh;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:120px 10%;
+        gap:50px;
+    }
+
+    .hero-text{
+        flex:1;
+    }
+
+    .hero-text h3{
+        color:#00e5ff;
+        margin-bottom:10px;
+    }
+
+    .hero-text h1{
+        font-size:60px;
+        margin-bottom:15px;
+    }
+
+    .hero-text h2{
+        color:#cfcfcf;
+        margin-bottom:20px;
+    }
+
+    .hero-text p{
+        line-height:1.8;
+        color:#bdbdbd;
+        max-width:600px;
+    }
+
+    .buttons{
+        margin-top:30px;
+    }
+
+    .btn{
+        display:inline-block;
+        padding:12px 28px;
+        margin-right:15px;
+        border-radius:30px;
+        text-decoration:none;
+        font-weight:600;
+        transition:.4s;
+    }
+
+    .btn1{
+        background:#00e5ff;
+        color:black;
+    }
+
+    .btn1:hover{
+        transform:translateY(-4px);
+    }
+
+    .btn2{
+        border:2px solid #00e5ff;
+        color:#00e5ff;
+    }
+
+    .btn2:hover{
+        background:#00e5ff;
+        color:black;
+    }
+
+    .hero-image{
+        flex:1;
+        display:flex;
+        justify-content:center;
+    }
+
+    .hero-image img{
+        width:350px;
+        height:350px;
+        border-radius:50%;
+        object-fit:cover;
+        border:4px solid #00e5ff;
+        box-shadow:0 0 40px #00e5ff;
+    }
+
+    section{
+        padding:100px 10%;
+    }
+
+    .title{
+        text-align:center;
+        font-size:40px;
+        margin-bottom:50px;
+        color:#00e5ff;
+    }
+
+    .about-card{
+        background:rgba(255,255,255,0.05);
+        padding:40px;
+        border-radius:20px;
+        backdrop-filter:blur(10px);
+    }
+
+    .about-card p{
+        line-height:1.9;
+        color:#d6d6d6;
+    }
+
+    .skills{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+        gap:20px;
+    }
+
+    .skill{
+        padding:25px;
+        text-align:center;
+        background:rgba(255,255,255,0.05);
+        border-radius:15px;
+        transition:.4s;
+    }
+
+    .skill:hover{
+        transform:translateY(-8px);
+        box-shadow:0 0 20px #00e5ff;
+    }
+
+    .projects{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+        gap:25px;
+    }
+
+    .project{
+        background:rgba(255,255,255,0.05);
+        padding:25px;
+        border-radius:20px;
+        transition:.4s;
+    }
+
+    .project:hover{
+        transform:translateY(-8px);
+        box-shadow:0 0 25px rgba(0,229,255,.4);
+    }
+
+    .project h3{
+        color:#00e5ff;
+        margin-bottom:10px;
+    }
+
+    .project p{
+        color:#cfcfcf;
+        line-height:1.7;
+    }
+
+    .contact{
+        text-align:center;
+    }
+
+    .contact p{
+        margin:15px 0;
+        font-size:18px;
+    }
+
+    .footer{
+        text-align:center;
+        padding:25px;
+        background:#050505;
+        color:#888;
+    }
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo"><b>PK</b></div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-text">
+        <h3>Hello, I'm</h3>
+        <h1>Pavan Kumar</h1>
+        <h2>Front-End Web Developer</h2>
+
+        <p>
+            Diploma Final Year Computer Science student passionate about
+            building responsive and visually appealing websites using
+            HTML, CSS, and JavaScript. I enjoy creating modern user
+            interfaces and continuously improving my development skills.
+        </p>
+
+        <div class="buttons">
+            <a href="#projects" class="btn btn1">View Projects</a>
+            <a href="#contact" class="btn btn2">Contact Me</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="profile.jpeg" alt="Profile">
+    </div>
+
+</section>
+
+<section id="about">
+
+    <h2 class="title">About Me</h2>
+
+    <div class="about-card">
+        <p>
+            I am a Diploma Final Year student with a strong interest in
+            web development. I enjoy designing responsive websites,
+            learning new technologies, and working on real-world projects.
+            My goal is to become a professional software developer and
+            contribute to innovative digital solutions.
+        </p>
+    </div>
+
+</section>
+
+<section id="skills">
+
+    <h2 class="title">Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Git</div>
+        <div class="skill">GitHub</div>
+        <div class="skill">Flexbox</div>
+        <div class="skill">CSS Grid</div>
+        <div class="skill">Responsive Design</div>
+
+    </div>
+
+</section>
+
+<section id="projects">
+
+    <h2 class="title">Projects</h2>
+
+    <div class="projects">
+
+        <div class="project">
+            <h3>Netflix Clone</h3>
+            <p>
+                Developed a responsive Netflix-inspired user interface
+                using HTML and CSS with modern layouts and styling.
+            </p>
+        </div>
+        <div class="project">
+    <h3>College Fest 2K26 Event Management</h3>
+
+        <p>
+            Actively participated in organizing College Fest 2K26,
+            contributing to event coordination, student engagement,
+            team collaboration, and smooth execution of technical and
+            cultural activities. Developed communication, leadership,
+            and problem-solving skills while working with diverse teams.
+        </p>
+    </div>
+
+        <div class="project">
+            <h3>Library Management Website</h3>
+            <p>
+                Built a library website for managing books and displaying
+                library information using HTML, CSS and JavaScript.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Restaurant Website</h3>
+            <p>
+                Designed an attractive restaurant website with menu,
+                services, contact details and responsive design.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <h2 class="title">Contact Me</h2>
+
+    <div class="contact">
+        <p>📧 pavankumarneela6@gmail.com</p>
+        <p>📱 +91 XXXXXXXXXX</p>
+        <p>💻 GitHub: github.com/PavanKumarneela6</p>
+        <p>🔗 LinkedIn:👎</p>
+    </div>
+
+</section>
+
+<div class="footer">
+    © 2026 Pavan Kumar | All Rights Reserved
+</div>
+
+</body>
+</html>
